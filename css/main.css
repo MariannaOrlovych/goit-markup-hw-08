@@ -78,7 +78,7 @@ body {
   margin-top: 0px;
 }
 
-.btn__subscribe, .comment__email::placeholder, .media__link, .soc__link, .cards__icon, .about__item-text, .features__list__item-link, .check__text span, .check__text, .form__field-checkbox, .button__x, .contacts__link-mail, .navigation {
+.btn__subscribe, .comment__email::placeholder, .media__link, .client__item-example, .soc__link, .cards__icon, .about__item-text, .features__list__item-link, .check__text span, .check__text, .form__field-checkbox, .button__x, .contacts__link-mail, .navigation {
   display: flex;
   align-items: center;
 }
@@ -686,15 +686,6 @@ textarea {
   background-color: var(--button-active-color);
 }
 
-.regular__customers {
-  padding: 60px 15px;
-}
-@media screen and (min-width: 1200px) {
-  .regular__customers {
-    padding: 94px 215px 94px 215px;
-  }
-}
-
 .customers__title {
   font-size: 28px;
   line-height: 1.17;
@@ -715,11 +706,13 @@ textarea {
 .client__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
 .client__item-example {
-  width: calc((100% - 30px) / 2);
+  width: 210px;
+  height: 92px;
   justify-content: center;
   border-radius: 4px;
   border: 1px solid #AFB1B8;
@@ -728,14 +721,21 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .client__item-example {
-    width: calc((100% - 60px) / 3);
+    width: 226px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__item-example {
+    width: 226px;
+    height: 92px;
   }
 }
 @media screen and (min-width: 1200px) {
   .client__item-example {
-    width: 210px;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    width: 170px;
+    height: 92px;
   }
 }
 .client__item-example:hover, .client__item-example:focus {

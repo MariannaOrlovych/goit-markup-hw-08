@@ -1,9 +1,4 @@
-.regular__customers{
-    padding: 60px 15px;
-    @include desktop{
-        padding: 94px 215px 94px 215px;
-    }
-}
+
 
 .customers__title{    
     @include font(null, 28px, 1.17);
@@ -18,27 +13,32 @@
 .client__list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
 .client__item-example {
-    width: calc((100% - 30px) / 2);
+    @extend %aline-list;
+    @include values (210px, 92px);
     justify-content: center;
-
     border-radius: 4px;
     border: 1px solid #AFB1B8;
     box-sizing: border-box;
 
     transition: border-color 250ms var(--timing-function);
-   
+
     @include tablet{
-        width: calc((100% - 60px) / 3);
+        @include values (226px, 92px);
+
+    }
+  
+    @include tablet{
+        @include values (226px, 92px);
     }
 
     @include desktop{
-        width: 210px;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        @include values (170px, 92px);
     }
 
     &:hover,
