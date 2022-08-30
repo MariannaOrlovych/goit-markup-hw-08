@@ -1,0 +1,38 @@
+.regular__customers{
+    padding-top: 94px 200px 94px 200px;
+}
+
+.customers__title{    
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 50px;}
+
+.client__list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.client__item-example {
+    @extend %aline-list;
+    justify-content: center;
+    @include values(170px, 92px);
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+
+    transition: border-color 250ms var(--timing-function);
+    &:hover,
+    &:focus{
+        border-color:var(--button-active-color);
+    }
+}
+
+.client__icons{
+    fill:#AFB1B8;
+    transition: fill 250ms var(--timing-function);
+    .client__item-example:hover &,
+    .client__item-example:focus &{
+        fill:var(--button-active-color);  
+    }   
+}

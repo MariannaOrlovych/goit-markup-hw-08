@@ -1,0 +1,8 @@
+.btn{
+    font-family: inherit;
+    @include font(700, 16px, 1.88, null);
+    @include values(200px, 50px);
+    color: var(--hero-color);
+    background-color: var(--button-active-color);
+    cursor: pointer;
+}

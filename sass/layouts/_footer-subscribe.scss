@@ -1,0 +1,72 @@
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include values(570px, 86px);
+}
+
+
+.subscribe__title{
+    @include font(700, 14px, 1.14);
+    text-transform: uppercase;
+    color: var(--hero-color);
+    margin-bottom: 20px;
+}
+
+.subscribe__form{
+    display: flex;
+}
+
+.comment__email{
+    @include values(358px, 50px);
+    margin-right: 12px;
+    padding: 15px 16px;
+
+    overflow: hidden;
+
+    color: var(--hero-color);
+    outline: currentColor;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+    transition: color 250ms var(--timing-function),
+    filter 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
+    &:focus {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        color: var(--hero-color);
+        border-color: var(--button-color);
+    }
+    &::placeholder{
+        @extend %aline-list;
+        @include font(null, 16px, 1.25);
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+
+.btn__subscribe {
+    @extend %aline-list;
+    justify-content: center;
+    position: relative;
+    padding: 10px 62px 10px 28px;
+    outline: var(--button-active-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: color 250ms var(--timing-function), 
+    box-shadow 250ms var(--timing-function);
+    &:focus{
+        outline: var(--button-active-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+}
+
+
+.picture{
+    fill: currentColor;
+    position: absolute;
+    right: 28px;
+    top:13px;
+}

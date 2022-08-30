@@ -1,0 +1,80 @@
+
+.team {
+    background-color:var(--about-backgraund-color);
+}
+
+.team__title{
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.cards__list{
+    display: flex;
+}
+
+.cards__item{
+    background-color: var(--primary-backgraund-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    flex-basis: calc((100% - 90px) / 4);
+    &:not(:last-child){
+        margin-right: 30px;
+    }
+}
+
+
+.cards__item-list{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.cards__item-title {
+    text-align: center;
+    @include font(500, 16px, 1.19);
+    color: var(--title-text-color);
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.cards__after-title {
+    text-align: center;
+    @include font(null, 16px, 1.19);
+    color: var(--primary-text-color);
+    margin-bottom: 16px;
+}
+
+.cards__icon{
+    @extend %aline-list;
+    justify-content: center;
+    gap: 10px;
+}
+
+.soc__icon{
+    fill: #AFB1B8;
+
+    transition: fill 250ms var(--timing-function);
+    .soc__link:hover &,
+    .soc__link:focus &{
+        fill:var(--hero-color);
+    }
+}
+
+.soc__link{
+    @extend %aline-list;
+    justify-content: center;
+    
+    @include values(44px, 44px);
+    border-radius: 50%;
+
+    background-color: var(--primary-backgraund-color);
+    transition: background-color 250ms var(--timing-function);
+    &:hover,
+    &:focus{
+    background-color: var(--button-active-color);}
+} 
+
+
