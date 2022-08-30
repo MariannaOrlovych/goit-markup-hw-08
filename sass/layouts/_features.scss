@@ -1,19 +1,27 @@
-.features .features__list{
+.features__list{
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .features__list__item{
-    flex-basis: calc((100% - 90px) / 4);
-    margin-right: 30px;
-    &:not(:last-child){
-        margin-right: 30px;
-    }
-}
+    width: 100%;
 
+    @include tablet {
+    width: calc((100% - 30px) / 2);
+    }
+
+    @include desktop {
+        width: calc((100% - 90px) / 4);
+    }
+
+}
+ 
 .features__list__item-link{
+
     @extend %aline-list;
     justify-content: center;
-    @include values(270px, 120px);
+    @include values(100%, auto);
     background: #F5F4FA;
     border-radius: 4px;
     margin-bottom: 30px;
@@ -21,13 +29,17 @@
 
 .features__list__item-title {
     @include font(700, 14px, 1.14);
+    text-align: center;
     text-transform: uppercase;
     color: var(--title-text-color);
-    margin-top: 0px;
     margin-bottom: 10px;
+    @include tablet {
+        text-align: start;
+    }
 }
 .features__list__item-after-title {
     @include font(null, 14px, 1.71);
     color: var(--primary-text-color);
-    margin-top: 0px;
+
 }
+
