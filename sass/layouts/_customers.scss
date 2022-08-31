@@ -27,8 +27,8 @@
 
     transition: border-color 250ms var(--timing-function);
 
-    @include tablet{
-        @include values (226px, 92px);
+    @include mobile{
+        @include values (210px, 92px);
 
     }
   
