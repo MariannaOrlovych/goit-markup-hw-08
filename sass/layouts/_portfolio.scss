@@ -1,14 +1,29 @@
 .button-list{
     display: flex;
-    min-width: 574px;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 50px;
+    gap: 8px;
+    row-gap : 15px;
+    margin-bottom: 40px;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    @include tablet {
+        width: calc((100% - 32px) / 5);
+    }
+    
+    @include tablet{
+        flex-wrap: nowrap;
+        margin-bottom: 50px;
+    }
 }
 
 
-.button-list__item:not(:last-child){
-    margin-right: 8px;
-}
+// .button-list__item:not(:last-child){
+//     margin-right: 8px;
+// }
 
 .filter__btn{
     display: block;
@@ -49,7 +64,6 @@
 }
 
 .example-list__item{
-    width: 100%;
     justify-content: center;
     color:var(--primary-backgraund-color);
     background-color:var(--primary-backgraund-color);  
