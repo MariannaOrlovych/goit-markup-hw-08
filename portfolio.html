@@ -54,12 +54,12 @@
         <section class="filter section">
             <div class="container">
                 <h2 class="visually-hidden">Фільтр</h2>
-                <ul class="button-list list">
+                <ul class="button-list  list">
                     <li class="button-list__item">
                         <button class="filter__btn" type="button">Все</button>
                     </li>
                     <li class="button-list__item">
-                        <button class="filter__btn" type="button">Веб-сайт</button>
+                        <button class="filter__btn" type="button">Веб-сайти</button>
                     </li>
                     <li class="button-list__item">
                        <button class="filter__btn" type="button"> Додатки</button>
@@ -76,10 +76,23 @@
                     <li class="example-list__item">
                         <a class="example__link link" href="#">
                            <div class="example__cards">
-                                <img
-                                src="./images/portfolio_1.jpg"
+                            <picture>
+                                <source  
+                                srcset="./images/portfolio_1_desk_1.jpg 1x, ./images/portfolio_1_desk_2x.jpg 2x"
+                                media="(min-width:1200px)">
+                                <source  
+                                srcset="./images/portfolio_1_tab_1.jpg 1x, ./images/portfolio_1_tab_2x.jpg 2x"
+                                media="(min-width:768px)">
+                                <source  
+                                srcset="./images/portfolio_1_mob_1.jpg 1x, ./images/portfolio_1_mob_1.jpg 2x"
+                                media="(max-width:767px)">
+    
+                                <img 
+                                src="./images/portfolio_1_mob_1.jpg"
                                 alt="Відкрита сторінка на ноутбуці з профілями"
-                                width="370">
+                                width="450"
+                                height="294"/>
+                            </picture>
                                 <p class="example__cards-text">
                                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                                 </p>

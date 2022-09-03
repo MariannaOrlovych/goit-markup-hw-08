@@ -140,6 +140,9 @@ body {
 }
 
 .btn {
+  display: block;
+  align-items: center;
+  justify-content: center;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -249,39 +252,52 @@ body {
   fill: currentColor;
 }
 
-.hero {
+.hero .container {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.hero_container {
   background-color: var(--hero-backgraund-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mob_1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 118px 60px;
-  flex-grow: 1;
+  padding: 118px 45px;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
+  .hero_container {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mob_2x.png);
   }
 }
+@media screen and (min-width: 480px) {
+  .hero_container {
+    padding: 118px 60px;
+  }
+}
 @media screen and (min-width: 768px) {
-  .hero {
+  .hero_container {
     padding: 118px 204px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tab_1.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero {
+  .hero_container {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tab_2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero {
-    padding: 200px 452px;
+  .hero_container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    min-height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desk_1.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
+  .hero_container {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desk_2x.jpg);
   }
 }
@@ -295,14 +311,16 @@ body {
   margin: 0 auto;
   margin-bottom: 30px;
   text-align: center;
-  max-width: 360px;
-  padding-right: 5px;
-  padding-left: 5px;
   text-transform: uppercase;
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    max-width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
-    max-width: 969px;
+    max-width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -311,13 +329,15 @@ body {
 }
 
 .hero__btn {
-  display: block;
-  margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  min-width: 216px;
   border-style: none;
-  padding: 10px 32px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .hero__btn {
+    min-width: 216px;
+  }
 }
 
 .backdrop {
@@ -743,9 +763,28 @@ textarea {
   justify-content: center;
   gap: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .client__list {
+    flex-wrap: nowrap;
+  }
+}
+
+.client__item {
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .client__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
 
 .client__item-example {
-  width: 210px;
+  width: 100%;
   height: 92px;
   justify-content: center;
   border-radius: 4px;
@@ -756,20 +795,16 @@ textarea {
 @media screen and (min-width: 480px) {
   .client__item-example {
     width: 210px;
-    height: 92px;
   }
 }
 @media screen and (min-width: 768px) {
   .client__item-example {
     width: 226px;
-    height: 92px;
   }
 }
 @media screen and (min-width: 1200px) {
   .client__item-example {
-    flex-wrap: nowrap;
     width: 170px;
-    height: 92px;
   }
 }
 .client__item-example:hover, .client__item-example:focus {
@@ -962,23 +997,22 @@ textarea {
   justify-content: center;
   gap: 8px;
   row-gap: 15px;
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 480px) {
-  .button-list {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .button-list {
-    width: calc((100% - 32px) / 5);
-  }
+  padding: 60px 124px 40px 0px;
 }
 @media screen and (min-width: 768px) {
   .button-list {
     flex-wrap: nowrap;
+    margin-bottom: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button-list {
     margin-bottom: 50px;
   }
+}
+
+.button-list__item {
+  width: calc((100% - 16px) / 3);
 }
 
 .filter__btn {
@@ -1008,15 +1042,12 @@ textarea {
   flex-wrap: wrap;
   gap: 30px;
 }
-.example-list img {
-  width: 100%;
-  height: auto;
-}
 
 .example-list__item {
   justify-content: center;
   color: var(--primary-backgraund-color);
   background-color: var(--primary-backgraund-color);
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .example-list__item {

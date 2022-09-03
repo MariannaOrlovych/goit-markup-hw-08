@@ -15,11 +15,28 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    
+    @include desktop{
+        flex-wrap: nowrap;
+    }
 }
+
+.client__item{
+    width: 100%;
+
+    @include mobile
+    {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @include tablet{
+        width: calc((100% - 60px) / 3);
+    }
+ }
 
 .client__item-example {
     @extend %aline-list;
-    @include values (210px, 92px);
+    @include values (100%, 92px);
     justify-content: center;
     border-radius: 4px;
     border: 1px solid #AFB1B8;
@@ -28,17 +45,15 @@
     transition: border-color 250ms var(--timing-function);
 
     @include mobile{
-        @include values (210px, 92px);
-
+        width: 210px;
     }
-  
-    @include tablet{
-        @include values (226px, 92px);
+    @include tablet
+    {
+        width: 226px;
     }
 
-    @include desktop{
-        flex-wrap: nowrap;
-        @include values (170px, 92px);
+    @include desktop {
+        width: 170px;
     }
 
     &:hover,

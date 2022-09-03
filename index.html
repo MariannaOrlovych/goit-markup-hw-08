@@ -48,7 +48,7 @@
 
     <main>
         <section class="hero section">
-            <div class="container">
+            <div class="hero_container container">
                     <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
                     <button data-modal-open class="hero__btn btn" type="button">Замовити послугу</button> 
 
@@ -132,9 +132,23 @@
                 <h2 class="team__title title">Наша команда</h2>
                 <ul class="cards__list list">
                     <li class="cards__item">
-                        <img src="./images/igor_demyanenko.jpg"
+                        <picture>
+                            <source  
+                            srcset="./images/igor_demyanenko_desk_1.jpg 1x, ./images/igor_demyanenko_desk_2x.jpg 2x"
+                            media="(min-width:1200px)">
+                            <source  
+                            srcset="./images/igor_demyanenko_tab_1.jpg 1x, ./images/igor_demyanenko_tab_2x.jpg 2x"
+                            media="(min-width:768px)">
+                            <source  
+                            srcset="./images/igor_demyanenko_mob_1.jpg 1x, ./images/igor_demyanenko_mob_2x.jpg 2x"
+                            media="(max-width:767px)">
+
+                            <img 
+                            src="./images/igor_demyanenko_mob_1.jpg"
                             alt="Ігор Дем'яненко"
-                            width="270"/>
+                            width="450"
+                            height="460"/>
+                        </picture>
                             <div class="cards__item-list">
                                 <h3 class="cards__item-title">Ігор Дем'яненко</h3>
                                 <p class="cards__after-title">Product Designer</p>
@@ -171,48 +185,78 @@
                             </div>
                     </li>
                     <li class="cards__item">
-                        <img src="./images/olha_repina.jpg"
-                        alt="Ольга Рєпіна"
-                        width="270"/>
-                            <div class="cards__item-list">
-                                <h3 class="cards__item-title">Ольга Рєпіна</h3>
-                                <p class="cards__after-title">Frontend Developer</p>
-                                <ul class="cards__icon list">
-                                    <li class="soc__item">
-                                        <a href="" class="soc__link link"> 
-                                            <svg class="soc__icon" width="20" height="20"> 
-                                                <use href="./images/icons.svg#icon-instagram"></use>
-                                            </svg>
+                        <picture>
+                            <source  
+                            srcset="./images/olha_repina_desk_1.jpg 1x, ./images/olha_repina_desk_2x.jpg 2x"
+                            media="(min-width:1200px)">
+                            <source  
+                            srcset="./images/olha_repina_tab_1.jpg 1x, ./images/olha_repina_tab_2x.jpg 2x"
+                            media="(min-width:768px)">
+                            <source  
+                            srcset="./images/olha_repina_mob_1.jpg 1x, ./images/olha_repina_mob_2x.jpg 2x"
+                            media="(max-width:767px)">
+
+                            <img 
+                            src="./images/olha_repina_mob_1.jpg"
+                            alt="Ольга Рєпіна"
+                            width="450"
+                            height="460"/>
+                        </picture>
+
+                        <div class="cards__item-list">
+                            <h3 class="cards__item-title">Ольга Рєпіна</h3>
+                            <p class="cards__after-title">Frontend Developer</p>
+                            <ul class="cards__icon list">
+                                <li class="soc__item">
+                                    <a href="" class="soc__link link"> 
+                                        <svg class="soc__icon" width="20" height="20"> 
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
                                         </a>
-                                    </li>
-                                    <li class="soc__item">
-                                        <a href="" class="soc__link link"> 
-                                            <svg class="soc__icon"  width="20" height="20">
-                                                <use href="./images/icons.svg#icon-twitter"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="soc__item">
-                                        <a href="" class="soc__link link"> 
-                                            <svg class="soc__icon"  width="20" height="20">
-                                                <use href="./images/icons.svg#icon-facebook"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="soc__item">
-                                        <a href="" class="soc__link link"> 
-                                            <svg class="soc__icon"  width="20" height="20">
-                                                <use href="./images/icons.svg#icon-linkedin"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                                </li>
+                                <li class="soc__item">
+                                    <a href="" class="soc__link link"> 
+                                         <svg class="soc__icon"  width="20" height="20">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="soc__item">
+                                    <a href="" class="soc__link link"> 
+                                        <svg class="soc__icon"  width="20" height="20">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="soc__item">
+                                    <a href="" class="soc__link link"> 
+                                        <svg class="soc__icon"  width="20" height="20">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="cards__item">
-                        <img src="./images/mykola_tarasov.jpg"
-                        alt="Микола Тарасов"
-                        width="270"/>
+                        <picture>
+                            <source  
+                            srcset="./images/mykola_tarasov_desk_1.jpg 1x, ./images/mykola_tarasov_desk_2x.jpg 2x"
+                            media="(min-width:1200px)">
+                            <source  
+                            srcset="./images/mykola_tarasov_tab_1.jpg 1x, ./images/mykola_tarasov_tab_2x.jpg 2x"
+                            media="(min-width:768px)">
+                            <source  
+                            srcset="./images/mykola_tarasov_mob_1.jpg 1x, ./images/mykola_tarasov_mob_2x.jpg 2x"
+                            media="(max-width:767px)">
+
+                            <img 
+                            src="./images/mykola_tarasov_mob_1.jpg"
+                            alt="Микола Тарасов"
+                            width="450"
+                            height="460"/>
+                        </picture>
+
                         <div class="cards__item-list">
                             <h3 class="cards__item-title">Микола Тарасов</h3>
                             <p class="cards__after-title">Marketing</p>
@@ -249,9 +293,24 @@
                         </div>
                     </li>
                     <li class="cards__item">
-                        <img src="./images/myhailo_ermakov.jpg"
-                        alt="Михайло Єрмаков"
-                        width="270"/>
+                        <picture>
+                            <source  
+                            srcset="./images/myhailo_ermakov_desk_1.jpg 1x, ./images/myhailo_ermakov_desk_2x.jpg 2x"
+                            media="(min-width:1200px)">
+                            <source  
+                            srcset="./images/myhailo_ermakov_tab_1.jpg 1x, ./images/myhailo_ermakov_tab_2x.jpg 2x"
+                            media="(min-width:768px)">
+                            <source  
+                            srcset="./images/myhailo_ermakov_mob_1.jpg 1x, ./images/myhailo_ermakov_mob_2x.jpg  2x"
+                            media="(max-width:767px)">
+
+                            <img 
+                            src="./images/myhailo_ermakov_mob_1.jpg"
+                            alt="Михайло Єрмаков"
+                            width="450"
+                            height="460"/>
+                        </picture>
+
                         <div class="cards__item-list">
                             <h3 class="cards__item-title">Михайло Єрмаков</h3>
                             <p class="cards__after-title">UI Designer</p>

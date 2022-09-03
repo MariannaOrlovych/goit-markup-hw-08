@@ -1,4 +1,8 @@
 .btn{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
     font-family: inherit;
     @include font(700, 16px, 1.88, null);
     @include values(200px, 50px);
