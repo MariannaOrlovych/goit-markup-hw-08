@@ -1,14 +1,13 @@
 .button-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    row-gap : 15px;
-    padding: 60px 124px 40px 0px;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    gap: 8px 15px;
 
     @include tablet{
-        flex-wrap: nowrap;
-        margin-bottom: 14px;
+        margin-bottom: 30px;
+        justify-content: center;
     }
 
     @include desktop {
@@ -17,12 +16,9 @@
    
 }
 
-.button-list__item{
-    width: calc((100% - 16px) / 3);
-}
 
 .filter__btn{
-    display:block;
+    display: block;
     @include font(500, 16px, 1.62);
     padding: 6px 22px;
     border: none;
@@ -51,26 +47,34 @@
 .example-list{
     display: flex;
     flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
     gap: 30px;
-   }
+
+    @include tablet {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
 .example-list__item{
     justify-content: center;
     color:var(--primary-backgraund-color);
     background-color:var(--primary-backgraund-color);  
-    width: 100%;
 
     @include tablet {
         width: calc((100% - 30px) / 2);
     }
     
     @include desktop{
-    width: calc((100% - 60px) / 3);}
+    width: calc((100% - 60px) / 3);
+    }
 
 }
 
 .example__link{
     display: block;
+    height: 440px;
     transition: box-shadow 250ms var(--timing-function);
     &:hover,
     &:focus{
@@ -109,6 +113,7 @@
 
 
 .example__conteiner{
+    flex-grow: 1;
     padding: 20px 24px 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;

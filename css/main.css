@@ -84,7 +84,6 @@ body {
 }
 
 .container {
-  padding-right: 15px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -994,25 +993,20 @@ textarea {
 .button-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  row-gap: 15px;
-  padding: 60px 124px 40px 0px;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  gap: 8px 15px;
 }
 @media screen and (min-width: 768px) {
   .button-list {
-    flex-wrap: nowrap;
-    margin-bottom: 14px;
+    margin-bottom: 30px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
   .button-list {
     margin-bottom: 50px;
   }
-}
-
-.button-list__item {
-  width: calc((100% - 16px) / 3);
 }
 
 .filter__btn {
@@ -1040,14 +1034,21 @@ textarea {
 .example-list {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
   gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .example-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .example-list__item {
   justify-content: center;
   color: var(--primary-backgraund-color);
   background-color: var(--primary-backgraund-color);
-  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .example-list__item {
@@ -1062,6 +1063,7 @@ textarea {
 
 .example__link {
   display: block;
+  height: 440px;
   transition: box-shadow 250ms var(--timing-function);
 }
 .example__link:hover, .example__link:focus {
@@ -1094,6 +1096,7 @@ textarea {
 }
 
 .example__conteiner {
+  flex-grow: 1;
   padding: 20px 24px 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: none;
