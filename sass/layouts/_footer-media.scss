@@ -2,16 +2,34 @@
 
 .footer__conteiner{
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+    // align-items: baseline;
+    // justify-content: space-between;
 }
 
 .information{
-    width: 231px;
+    margin-bottom: 60px;
+    @include tablet {
+        display: block;
+
+    }
+
 }
 
 .join{
-    width: 206px;
+    margin-bottom: 60px;
+
+    @include tablet {
+        display: block;
+    }
 }
 
 .join__after-title{

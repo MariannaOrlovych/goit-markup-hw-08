@@ -5,16 +5,19 @@
 
 
 .address__location {
-    @include font(null, 12px, 1.71);
+    @include font(null, 14px, 1.71);
     margin-top: 0px;
 
     color: var(--hero-color);
     transition: color 250ms var(--timing-function);
 }
 
+.address__list{
+    margin-bottom: 20px;
+}
 
-.address__item:not(:last-child){
-    margin-bottom: 9px;
+.address__item{
+   column-gap: 9px;
 }
 
 .address__location:hover,

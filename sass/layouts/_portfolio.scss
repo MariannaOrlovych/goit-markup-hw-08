@@ -73,7 +73,9 @@
 }
 
 .example__link{
-    display: block;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
     height: 440px;
     transition: box-shadow 250ms var(--timing-function);
     &:hover,
