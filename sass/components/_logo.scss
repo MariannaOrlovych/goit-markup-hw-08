@@ -1,7 +1,14 @@
 .logo{
     display: inline-block;
     font-family: 'Raleway';
-    @include font(null, 26px, 1.19);
+    
+    @include font(null, 24px, 1.16);
+
+    @include desktop {
+        font-size: 26px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+    }
 }
 
 

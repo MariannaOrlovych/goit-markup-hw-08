@@ -78,7 +78,7 @@ body {
   margin-top: 0px;
 }
 
-.comment__email::placeholder, .media__link, .client__item-example, .soc__link, .cards__icon, .about__item-text, .features__list__item-link, .check__text span, .check__text, .form__field-checkbox, .button__x, .contacts__link-mail, .navigation {
+.comment__email::placeholder, .media__link, .client__item-example, .soc__link, .cards__icon, .about__item-text, .features__list__item-link, .check__text span, .check__text, .form__field-checkbox, .button__x, .contacts__link-mail, .navigation_container {
   display: flex;
   align-items: center;
 }
@@ -109,9 +109,16 @@ body {
 .logo {
   display: inline-block;
   font-family: "Raleway";
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 
 .header__logo-studio--color-dark {
@@ -120,6 +127,104 @@ body {
 
 .logo__footer-studio--color-light {
   color: var(--hero-color);
+}
+
+.mobile__btn {
+  background-color: #fff;
+  border-radius: 10%;
+  border-color: transparent;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .mobile__btn {
+    display: none;
+  }
+}
+
+.image__menu {
+  display: block;
+  margin-left: auto;
+}
+
+.mob__menu {
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10px;
+  padding-bottom: 48px;
+}
+.mob__menu > .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-close__btn {
+  display: flex;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  border-color: transparent;
+  background-color: #fff;
+  align-items: center;
+}
+
+.mob-navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-navigation__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mob-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-contacts__link-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mob-contacts__link-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mobile-soc__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-soc_item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-soc__link {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
 }
 
 .title {
@@ -154,9 +259,21 @@ body {
 }
 
 .header__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: var(--first-logo-color);
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .header__logo-studio {
@@ -172,10 +289,20 @@ body {
   border-left: none;
 }
 
+.navigation_container {
+  justify-content: flex-end;
+}
+
 .navigation__list {
-  display: flex;
+  display: none;
   margin-left: 93px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: contents;
+    display: flex;
+  }
 }
 .navigation__list .navigation__item + .navigation__item {
   margin-left: 50px;
@@ -210,12 +337,17 @@ body {
 }
 
 .contacts__list {
-  display: flex;
-  margin-left: auto;
-  justify-content: center;
+  display: none;
 }
-.contacts__list .contacts__item + .contacts__item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .contacts__list {
+    display: contents;
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts__list .contacts__item + .contacts__item {
+    margin-left: 30px;
+  }
 }
 
 .contacts__link {
@@ -249,6 +381,12 @@ body {
 .contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .contacts__icon {
+    width: 14px;
+    height: 10px;
+  }
 }
 
 .hero_container {
@@ -344,7 +482,7 @@ body {
   transition: opacity 500ms var(--timing-function), visibility 500ms var(--timing-function);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -356,7 +494,7 @@ textarea {
 
 .modal {
   position: absolute;
-  padding: 40px;
+  padding: 20px;
   top: 50%;
   left: 50%;
   border-radius: 10px;
@@ -367,6 +505,17 @@ textarea {
   background-color: #fff;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms var(--timing-function), min-height 500ms var(--timing-function);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .button__x {
@@ -478,6 +627,13 @@ textarea {
 .comment:focus {
   outline-color: var(--button-active-color);
 }
+@media screen and (min-width: 1200px) {
+  .comment {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
+}
 
 .checkbox {
   -webkit-perspective: none;
@@ -505,15 +661,29 @@ textarea {
 }
 
 .form__checkbox-link {
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--button-active-color);
 }
+@media screen and (min-width: 480px) {
+  .form__checkbox-link {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form__checkbox-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
 
 .check__text {
   justify-content: center;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
@@ -526,6 +696,20 @@ textarea {
   border: 2px solid var(--button-text-color);
   border-radius: 3px;
   margin-right: 7px;
+}
+@media screen and (min-width: 480px) {
+  .check__text {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .check__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .icon__check {

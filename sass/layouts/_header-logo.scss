@@ -1,13 +1,20 @@
 .header__logo{
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     color: var(--first-logo-color);
 
+    @include tablet{
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+    @include desktop {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
 }
 
 
 .header__logo-studio{
-    // color: var(--second-logo-color);
     padding-top: 0px;
     padding-bottom: 0px;
 }
