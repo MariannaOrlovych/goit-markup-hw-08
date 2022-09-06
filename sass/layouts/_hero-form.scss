@@ -22,18 +22,20 @@ textarea{
 
 .modal{
     position: absolute;
+    padding: 40px;
     top: 50%;
     left: 50%;
     border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
     @include values(450px, 609px);
 
     // @include values(528px, 581px);
 
-    padding: 40px;
-
     background-color: #fff;
 
     transform: translate(-50%, -50%) scale(1);
+    // transform: translate(-50%, -50%) scale(1);
     transition: transform 500ms var(--timing-function), min-height 500ms var(--timing-function) ;
 }
 
@@ -58,7 +60,7 @@ textarea{
 }
 
 .backdrop.is-hidden .modal{
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-60%, -50%) scale(0);
     min-height: 0;
 }
 
