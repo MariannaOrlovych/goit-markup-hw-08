@@ -171,6 +171,16 @@ body {
   border-color: transparent;
   background-color: #fff;
   align-items: center;
+  cursor: pointer;
+}
+
+.mobile-close__btn:hover .image-close__menu,
+.mobile-close__btn:focus .image-close__menu {
+  fill: #2196F3;
+}
+
+.image-close__menu {
+  transition: fill 250ms var(--timing-function);
 }
 
 .mob-navigation__item:not(:last-child) {
@@ -281,9 +291,6 @@ body {
 .header {
   background-color: var(--primary-backgraund-color);
   border-bottom: 1px solid #ECECEC;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
 }
 
 .current {
