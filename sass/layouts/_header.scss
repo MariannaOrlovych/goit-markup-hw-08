@@ -6,11 +6,18 @@
     border-left: none;
 }
 
+.current{
+    color: var(--button-active-color);
+}
 
 .navigation_container{
-    @extend %aline-list;
-    justify-content: flex-end;
+    display: flex;
+    justify-content: space-between
 
+}
+
+.navigation{
+    display: flex;
 }
 
 
@@ -21,9 +28,10 @@
     @include tablet{
         display:contents;
         display: flex;
-    }
-    margin-left: 93px;
-    position: relative;
+        justify-content: space-between;
+        justify-content: center;
+        margin-left: 87px;
+        position: relative;
     & .navigation__item + .navigation__item{
         margin-left: 50px;
     }
@@ -32,57 +40,81 @@
         padding-top: 32px;
         padding-bottom: 32px;
     }
-    
+    }
+    @include desktop {
+        margin-left: 93px;
+    }
+   
 }
 
 
 .navigation__link {
-    position: relative;
-    display: block;
-   
-    color: var(--title-text-color);
-
-    transition: color 250ms var(--timing-function);
-    &:hover,
-    &:focus{
-        color: var(--button-active-color);
-        }
-    &.current::after{
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom:-1px;
+    @include tablet{
+        position: relative;
         display: block;
-        @include values(100%, 4px);
-        border-radius: 2px;
-        background-color: var(--button-active-color);
-        opacity: 1;
-        transition: opacity 250ms var(--timing-function);
-    }
+   
+        color: var(--title-text-color);
 
+        transition: color 250ms var(--timing-function);
+        &:hover,
+        &:focus{
+            color: var(--button-active-color);
+        }
 }
+
+.current{
+    color: #2196F3;
+}
+
+.current::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:-1px;
+    display: block;
+    @include values(100%, 4px);
+    border-radius: 2px;
+    background-color: var(--button-active-color);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+}
+
 
 .contacts__list{
     display: none;
     @include tablet{
-        display: contents;
         display: flex;
         flex-direction: column;
-        // margin-left: auto;
-        // justify-content: center;
+        align-items: flex-end;
+        justify-content: center;
+
+
+        gap: 10px;
+        // justify-content: flex-end;
+        padding-top: 21px;
+        padding-bottom: 21px;
+
         & .contacts__item + .contacts__item{
-            margin-left: 30px;}
+            margin-left: 30px;
+        }
     }
 
 }
 
-
 .contacts__link{
+    @include tablet{
+
+        @include font(500, 12px, 0.17, 0.02em);
+        color: var(--primary-text-color);
+    }
+
+    @include desktop {
     @include font(500, 14px, 0.14, 0.02em);
     color: var(--primary-text-color);
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 32px;}
 }
+
 
 .contacts__link-mail {
     @extend %aline-list;
@@ -95,23 +127,58 @@
 }
 
 .contacts__link-tel {
-    display: flex;
-    align-items: baseline;
-    height: 16px;
-    margin-left: 0; 
-     transition: color 250ms var(--timing-function);
-    &:hover,
-    &:focus{
-        color: var(--button-active-color);
+    @include tablet {
+
+        display: flex;
+        align-items: baseline;
+        height: 16px;
+        margin-left: 0;
+        margin-right: 15px; 
+        transition: color 250ms var(--timing-function);
+        &:hover,
+        &:focus{
+            color: var(--button-active-color);
         }
+    }
 }
 
 
 .contacts__icon{
     @include tablet {
-        width: 14px;
-        height: 10px;
+        display: block;
+        margin-right: 8px;
+        fill: currentColor;
     }
-    margin-right: 10px;
-    fill: currentColor;
+    @include desktop {
+        margin-right: 10px;
+        width: 16px;
+        height: 12px;
+    }
 }
+
+.contacts__icon-tel{
+    @include tablet{
+        width: 10px;
+        height: 14px;
+    }
+    @include desktop {
+        width: 10px;
+        height: 16px;
+    }
+}
+
+.contacts__icon-mail{
+    @include tablet{
+        width: 10px;
+        height: 14px;
+    }
+    @include desktop {
+        width: 16px;
+        height: 12px;
+    }
+}
+
+
+
+
+

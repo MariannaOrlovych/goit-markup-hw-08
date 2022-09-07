@@ -1,5 +1,5 @@
 .logo{
-    display: inline-block;
+    display: flex;
     font-family: 'Raleway';
     
     @include font(null, 24px, 1.16);
