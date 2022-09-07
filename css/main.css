@@ -60,10 +60,6 @@ body {
   text-decoration: none;
 }
 
-.current {
-  color: #2196F3;
-}
-
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -130,12 +126,14 @@ body {
 }
 
 .mobile__btn {
+  display: flex;
   background-color: #fff;
   border-radius: 10%;
   border-color: transparent;
   width: 40px;
   height: 40px;
   margin-left: auto;
+  padding-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .mobile__btn {
@@ -145,7 +143,6 @@ body {
 
 .image__menu {
   display: block;
-  margin-left: auto;
 }
 
 .mob__menu {
@@ -283,10 +280,10 @@ body {
 
 .header {
   background-color: var(--primary-backgraund-color);
-  border: 1px solid #ECECEC;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  border-bottom: 1px solid #ECECEC;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }
 
 .current {
@@ -325,7 +322,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .navigation__list {
-    margin-left: 93px;
+    margin-left: 92px;
   }
 }
 
@@ -376,6 +373,15 @@ body {
     margin-left: 30px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .contacts__list {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .contacts__link {
@@ -393,8 +399,6 @@ body {
     line-height: 0.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -440,11 +444,23 @@ body {
     height: 14px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .contacts__icon-tel {
+    width: 10px;
+    height: 16px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .contacts__icon-mail {
     width: 14px;
     height: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon-mail {
+    width: 16px;
+    height: 12px;
   }
 }
 
@@ -453,13 +469,15 @@ body {
 }
 
 .hero_container {
+  padding-top: 0;
   background-color: var(--hero-backgraund-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mob_1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 100vw;
   padding: 118px 45px;
+  width: 100%;
+  max-width: 1600px;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero_container {
@@ -486,7 +504,6 @@ body {
   .hero_container {
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 1600px;
     min-height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desk_1.jpg);
   }
@@ -849,8 +866,8 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .about {
+    display: block;
     padding-top: 0;
-    display: contents;
   }
 }
 

@@ -1,9 +1,9 @@
 .header{
     background-color: var(--primary-backgraund-color);
-    border: 1px solid #ECECEC;
-    border-top: none;
-    border-right: none;
-    border-left: none;
+    border-bottom: 1px solid #ECECEC;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 
 .current{
@@ -13,14 +13,11 @@
 .navigation_container{
     display: flex;
     justify-content: space-between
-
 }
 
 .navigation{
     display: flex;
 }
-
-
 
 
 .navigation__list{
@@ -38,11 +35,11 @@
     & .navigation__link {
         display: block;
         padding-top: 32px;
-        padding-bottom: 32px;
+        padding-bottom: 32px;}
     }
-    }
+
     @include desktop {
-        margin-left: 93px;
+        margin-left: 92px;
     }
    
 }
@@ -60,6 +57,7 @@
         &:focus{
             color: var(--button-active-color);
         }
+    }
 }
 
 .current{
@@ -90,13 +88,19 @@
 
 
         gap: 10px;
-        // justify-content: flex-end;
         padding-top: 21px;
         padding-bottom: 21px;
 
         & .contacts__item + .contacts__item{
             margin-left: 30px;
         }
+    }
+    @include desktop {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 30px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 
 }
@@ -111,8 +115,7 @@
     @include desktop {
     @include font(500, 14px, 0.14, 0.02em);
     color: var(--primary-text-color);
-    padding-top: 32px;
-    padding-bottom: 32px;}
+    }
 }
 
 
@@ -169,16 +172,11 @@
 
 .contacts__icon-mail{
     @include tablet{
-        width: 10px;
-        height: 14px;
+        width: 14px;
+        height: 10px;
     }
     @include desktop {
         width: 16px;
         height: 12px;
     }
 }
-
-
-
-
-

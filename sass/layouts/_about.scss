@@ -1,9 +1,8 @@
 .about{
     display: none;
     @include desktop {
-    padding-top: 0;
-    display: contents;}
-    
+    display: block;
+padding-top: 0;}
 }
 
 .about__title{
