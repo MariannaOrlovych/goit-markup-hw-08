@@ -11,11 +11,17 @@
     @include tablet{
         display: none;
     }
-    
+    &:focus .image__menu,
+    &:hover {
+        fill:#2196F3;
+    }
 }
+
+
 
 .image__menu{
     display: block;
+    transition: fill 250ms var(--timing-function);
 }
 
 .mob__menu {
@@ -28,6 +34,8 @@
     height: 100vh;
     padding-top: 10px;
     padding-bottom: 48px;
+    transition: opacity 500ms var(--timing-function),
+    visibility 500ms var(--timing-function);
     >.container{
         height: 100%;
         display: flex;
@@ -44,7 +52,10 @@
     background-color: #fff;
     align-items: center;
     cursor: pointer;
+    transition: opacity 500ms var(--timing-function),
+    visibility 500ms var(--timing-function);
 }
+
 .mobile-close__btn:hover .image-close__menu,
 .mobile-close__btn:focus .image-close__menu {
     fill: #2196F3;
@@ -63,6 +74,10 @@
 .mob-navigation__link {
     @include font(500, 40px, 1.18, 0.02em);
     color: #212121;
+    &:hover,
+    &:focus{
+        color: #2196F3;
+    }
 }
 
 
@@ -83,11 +98,12 @@
 .mobile-soc__list {
     display: flex;
     flex-wrap: wrap;
-   
+    gap: 10px;
 }
 .mobile-soc_item:not(:last-child){
     padding-right: 10px;
-    border-right: 1px solid rgba(33,33,33,.2);}
+    border-right: 1px solid rgba(33,33,33,.2);
+}
 
 
 .mobile-soc__link {

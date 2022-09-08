@@ -11,8 +11,12 @@
         align-items: baseline;
         justify-content: space-around;
     }
-    // align-items: baseline;
-    // justify-content: space-between;
+
+    @include desktop
+    {
+        align-items: baseline;
+        justify-content: space-between;
+    }
 }
 
 .information{

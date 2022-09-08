@@ -140,9 +140,13 @@ body {
     display: none;
   }
 }
+.mobile__btn:focus .image__menu, .mobile__btn:hover {
+  fill: #2196F3;
+}
 
 .image__menu {
   display: block;
+  transition: fill 250ms var(--timing-function);
 }
 
 .mob__menu {
@@ -155,6 +159,7 @@ body {
   height: 100vh;
   padding-top: 10px;
   padding-bottom: 48px;
+  transition: opacity 500ms var(--timing-function), visibility 500ms var(--timing-function);
 }
 .mob__menu > .container {
   height: 100%;
@@ -172,6 +177,7 @@ body {
   background-color: #fff;
   align-items: center;
   cursor: pointer;
+  transition: opacity 500ms var(--timing-function), visibility 500ms var(--timing-function);
 }
 
 .mobile-close__btn:hover .image-close__menu,
@@ -193,6 +199,9 @@ body {
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #212121;
+}
+.mob-navigation__link:hover, .mob-navigation__link:focus {
+  color: #2196F3;
 }
 
 .mob-contacts__item:not(:last-child) {
@@ -218,6 +227,7 @@ body {
 .mobile-soc__list {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .mobile-soc_item:not(:last-child) {
@@ -1167,6 +1177,12 @@ textarea {
     justify-content: space-around;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__conteiner {
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
 
 .information {
   margin-bottom: 60px;
@@ -1227,6 +1243,16 @@ textarea {
     flex-direction: column;
   }
 }
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    justify-content: center;
+    align-items: flex-start;
+    align-items: initial;
+    text-align: start;
+    width: 570px;
+    height: 86px;
+  }
+}
 
 .subscribe__title {
   font-weight: 700;
@@ -1236,11 +1262,6 @@ textarea {
   text-transform: uppercase;
   color: var(--hero-color);
   margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .subscribe__title {
-    display: block;
-  }
 }
 
 .subscribe__form {
@@ -1253,12 +1274,18 @@ textarea {
     justify-content: center;
   }
 }
+@media screen and (min-width: 1200px) {
+  .subscribe__form {
+    flex-wrap: nowrap;
+  }
+}
 
 .comment__email {
   width: 100%;
   height: 50px;
   margin-bottom: 20px;
   overflow: hidden;
+  padding: 15px 16px;
   color: var(--hero-color);
   outline: currentColor;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1277,11 +1304,21 @@ textarea {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
+@media screen and (min-width: 1200px) {
+  .comment__email {
+    margin-right: 12px;
+  }
+}
 
 .submit {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .submit {
+    display: block;
+  }
 }
 
 .btn__subscribe {
@@ -1295,6 +1332,13 @@ textarea {
 .btn__subscribe:focus {
   outline: var(--button-active-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 1200px) {
+  .btn__subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .picture {
