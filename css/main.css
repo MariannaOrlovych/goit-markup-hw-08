@@ -439,6 +439,11 @@ body {
     color: var(--button-active-color);
   }
 }
+@media screen and (min-width: 1200px) {
+  .contacts__link-tel {
+    align-items: center;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .contacts__icon {

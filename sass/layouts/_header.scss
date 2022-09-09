@@ -140,6 +140,10 @@
             color: var(--button-active-color);
         }
     }
+    @include desktop {
+        align-items: center;
+    }
+
 }
 
 
