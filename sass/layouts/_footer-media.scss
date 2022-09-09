@@ -16,14 +16,16 @@
     {
         align-items: baseline;
         justify-content: space-between;
+        text-align: start;
     }
 }
+
 
 .information{
     margin-bottom: 60px;
     @include tablet {
         display: block;
-
+        margin-bottom: 0;
     }
 
 }
@@ -33,6 +35,7 @@
 
     @include tablet {
         display: block;
+        margin-bottom: 0;
     }
 }
 

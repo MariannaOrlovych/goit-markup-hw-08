@@ -1115,6 +1115,11 @@ textarea {
   margin-bottom: 20px;
   justify-content: center;
 }
+@media screen and (min-width: 1200px) {
+  .logo__footer {
+    justify-content: start;
+  }
+}
 
 .logo__footer-studio {
   padding-top: 0px;
@@ -1181,6 +1186,7 @@ textarea {
   .footer__conteiner {
     align-items: baseline;
     justify-content: space-between;
+    text-align: start;
   }
 }
 
@@ -1190,6 +1196,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .information {
     display: block;
+    margin-bottom: 0;
   }
 }
 
@@ -1199,6 +1206,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .join {
     display: block;
+    margin-bottom: 0;
   }
 }
 
@@ -1248,7 +1256,6 @@ textarea {
     justify-content: center;
     align-items: flex-start;
     align-items: initial;
-    text-align: start;
     width: 570px;
     height: 86px;
   }
